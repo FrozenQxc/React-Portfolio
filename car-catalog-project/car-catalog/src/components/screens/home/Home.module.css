@@ -1,7 +1,7 @@
 
-
 .item {
-    border: 1px solid white;
+    margin-top: 55px;
+    border: 2px solid rgb(255, 255, 255);
 }
 
 .image {
@@ -20,3 +20,14 @@
     font-size: 20px;
 }
 
+h1 {
+    display: flex;
+    color: blueviolet;
+
+    justify-content: center;
+}
+
+.btn:hover{
+    background-color: rgb(255, 0, 225);
+
+}
