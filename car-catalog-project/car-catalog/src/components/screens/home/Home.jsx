@@ -11,8 +11,8 @@ function Home() {
       <CreateCarForm setCars={setCars} />
       <h1>Cars catalog</h1>
       <div>
-        {cars.length ? cars.map(car =>
-          (<CarItem key={car.id} car={car} />))
+        {cars.length ? cars.map(car => (
+          <CarItem key={car.id} car={car} />))
           :<p>Машин нет</p>}
       </div>
     </div>
