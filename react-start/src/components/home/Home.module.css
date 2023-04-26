@@ -1,0 +1,7 @@
+.item {
+    color: antiquewhite;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20%;
+}
