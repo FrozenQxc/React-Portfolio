@@ -5,7 +5,8 @@ function CarItem({ car }) {
     <div
       className={styles.image}
       style={{ backgroundImage: `url(${car.image})` }}
-    ></div>
+    >
+    </div>
     <div className={styles.info}>
       <h2>{car.name}</h2>
       <p>
