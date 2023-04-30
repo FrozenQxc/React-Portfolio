@@ -1,0 +1,35 @@
+
+.home {
+    background: #fff url(https://gamerwall.pro/uploads/posts/2021-12/1638360606_33-gamerwall-pro-p-nezhit-voin-varkraft-krasivie-oboi-33.jpg) center top/auto repeat content-box local;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    h1 {
+        font-size: 50px;
+        padding-bottom: 50px;  
+        color: rgb(255, 255, 255);  
+    }
+
+    .work {
+        display: flex;
+        flex-direction: column;
+        font-size: 35px;
+        gap: 35px;
+        cursor: pointer;
+
+        
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            background-color:  rgb(65, 197, 84);
+        }
+    }
+}

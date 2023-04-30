@@ -1,0 +1,41 @@
+.container {
+    padding: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 33px;
+    background-color: rgba(129, 131, 130, 0.941);
+
+    h1 {
+            
+        background-color: aqua;
+        padding: 12px 25px 15px;
+        margin: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.941)
+    }
+    
+    h2 {
+        background-color: rgb(226, 238, 238);
+        padding: 12px 25px 15px;
+        margin: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.941)
+    }
+}
+
+.button {
+    display: flex;
+    gap: 55px;
+
+    button {
+        font-size: 25px;
+        padding: 20px;
+
+    }
+}
+
+.input {
+    input {
+        font-size: 50px;
+    }
+}
