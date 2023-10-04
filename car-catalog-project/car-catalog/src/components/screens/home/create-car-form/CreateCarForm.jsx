@@ -2,60 +2,69 @@ import { useState } from 'react'
 import styles from './CreateCar.module.css'
 
 const clearData = {
-    price: '',
-    name: '',
-    image: '',
+	price: '',
+	name: '',
+	image: '',
 }
-
 
 const CreateCarForm = ({ setCars }) => {
-    const [data, setData] = useState(clearData)
+	const [data, setData] = useState(clearData)
 
-    const createCar = e => {
-        e.preventDefault()
+	const createCar = e => {
+		e.preventDefault()
 
-        setCars(prev => [{
-            id: prev.lenght + 1,
-            ...data
-        },
-        ...prev,
-        ])
+		setCars(prev => [
+			{
+				id: prev.lenght + 1,
+				...data,
+			},
+			...prev,
+		])
 
-        setData({
-            price: '',
-            name: '',
-            image: '',
-        })
-    }
+		setData({
+			price: '',
+			name: '',
+			image: '',
+		})
+	}
 
-
-    return (
-        <form className={styles.form}>
-            <input
-                placeholder="Name"
-                onChange={e => setData(prev => ({
-                    ...prev, name: e.target.value
-                }))}
-                value={data.name}
-            />
-            <input
-                placeholder='Price'
-                onChange={e => setData(prev => ({
-                    ...prev, price: e.target.value
-                }))}
-                value={data.price}
-            />
-            <input
-                placeholder="Image"
-                onChange={e => setData(prev => ({
-                    ...prev, image: e.target.value
-                }))}
-                value={data.image}
-            />
-            <button className='btn' onClick={e => createCar(e)}>Create</button>
-        </form>
-
-    )
+	return (
+		<form className={styles.form}>
+			<input
+				placeholder='Name'
+				onChange={e =>
+					setData(prev => ({
+						...prev,
+						name: e.target.value,
+					}))
+				}
+				value={data.name}
+			/>
+			<input
+				placeholder='Price'
+				onChange={e =>
+					setData(prev => ({
+						...prev,
+						price: e.target.value,
+					}))
+				}
+				value={data.price}
+			/>
+			<input
+				placeholder='Image'
+				onChange={e =>
+					setData(prev => ({
+						...prev,
+						image: e.target.value,
+					}))
+				}
+				value={data.image}
+			/>
+			<button className='btn' onClick={e => createCar(e)}>
+				Create
+			</button>
+		</form>
+	)
 }
 
-export default CreateCarForm  
+export default CreateCarForm

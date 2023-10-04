@@ -1,21 +1,21 @@
 .form {
-    display: grid;
-    grid-template-columns: 250px;
-    margin: 10px auto 30px;
-    justify-content: center;
+	display: grid;
+	grid-template-columns: 250px;
+	margin: 10px auto 30px;
+	justify-content: center;
 }
 
-.form input{
-    padding: 6px 10px;
-    border: none;
-    outline: none;
-    transition: border-color 0.4 ease;
-    border: 1px solid transparent;
-    margin-bottom: 10px;
+.form input {
+	padding: 6px 10px;
+	border: none;
+	outline: none;
+	transition: border-color 0.4 ease;
+	border: 1px solid transparent;
+	margin-bottom: 10px;
 }
 
- /* При нажатие меняет цвет */
- 
+/* При нажатие меняет цвет */
+
 .form input:focus {
-    border-color: fuchsia;
+	border-color: fuchsia;
 }

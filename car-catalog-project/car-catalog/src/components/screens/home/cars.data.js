@@ -17,5 +17,11 @@ export const cars = [
         image: 'https://sun9-33.userapi.com/impg/U15ep6juEjnDmA7QWpRZYVJRWZdcoUHB6ntOqg/Y-06GOawmX8.jpg?size=2048x1536&quality=96&sign=c93ab2297ffc76c790efaba201c82f8c&type=album',
         price: 3500,
     },
+    {
+        id: 3,
+        name: 'Chaser',
+        image: 'https://sun9-33.userapi.com/impg/U15ep6juEjnDmA7QWpRZYVJRWZdcoUHB6ntOqg/Y-06GOawmX8.jpg?size=2048x1536&quality=96&sign=c93ab2297ffc76c790efaba201c82f8c&type=album',
+        price: 3500,
+    },
 
 ]
