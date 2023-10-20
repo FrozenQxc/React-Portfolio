@@ -1,0 +1,9 @@
+.left-panel {
+	padding: 10px;
+	min-width: 400px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: #111;
+	margin: 10px;
+}
