@@ -1,7 +1,11 @@
 import './Button.css'
 
-const Button = ({ children }) => {
-	return <button className='button accent'>Сохранить воспоминание</button>
+const Button = ({ text, onClick }) => {
+	return (
+		<button className='button accent' onClick={onClick}>
+			{text}
+		</button>
+	)
 }
 
 export default Button

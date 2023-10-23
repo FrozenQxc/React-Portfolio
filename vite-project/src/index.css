@@ -37,7 +37,7 @@ body {
 	background-position: center;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	body {
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -46,4 +46,4 @@ body {
 		height: 1500px;
 		background-image: url('/public/1.jpg');
 	}
-}
+} */

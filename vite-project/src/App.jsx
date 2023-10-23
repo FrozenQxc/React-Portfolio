@@ -1,24 +1,47 @@
 import Button from './components/Button/Button'
-import Input from './components/Input/Input'
-import JournalItem from './components/JournalItem/JournalItem'
 import Body from './layouts/Body/Body'
 import LeftPanel from './layouts/LeftPanel/LeftPanel'
 
+import { useState } from 'react'
 import './App.css'
+import JournalForm from './components/JournalForm/JournalForm'
+import JournalList from './components/JournalList/JournalList'
+
+const INITIAL_DATA = [
+	// {
+	// 	id: 1,
+	// 	title: 'Я райн гослинг',
+	// 	text: 'Вкусно покушал',
+	// 	date: new Date(),
+	// },
+	// {
+	// 	id: 2,
+	// 	title: 'Омега люль',
+	// 	text: 'Шнеля шнеля',
+	// 	date: new Date(),
+	// },
+]
 
 const App = () => {
-	const data = [
-		{
-			title: 'Я райн гослинг',
-			text: 'Вкусно покушал',
-			date: new Date(),
-		},
-		{
-			title: 'Омега люль',
-			text: 'Шнеля шнеля',
-			date: new Date(),
-		},
-	]
+	const [items, setItems] = useState(INITIAL_DATA)
+
+	const [inputValue, setInputValue] = useState('')
+
+	const handleInputChange = e => {
+		setInputValue(e.target.value)
+	}
+
+	const addItem = item => {
+		setItems(oldItems => [
+			...oldItems,
+			{
+				text: item.text,
+				title: item.title,
+				date: new Date(item.date),
+				id: Math.max(...(oldItems.map(i => i.id) + 1)),
+			},
+		])
+	}
 
 	return (
 		<div className='app'>
@@ -30,22 +53,11 @@ const App = () => {
 					</a>
 				</div>
 				<Button />
-				<Input />
-				<JournalItem
-					title={data[0].title}
-					text={data[0].text}
-					data={data[0].date}
-				/>
-				<JournalItem
-					title={data[1].title}
-					text={data[1].text}
-					data={data[1].date}
-				/>
+
+				<JournalList items={items} />
 			</LeftPanel>
 			<Body>
-				<div>
-					<h1>ПРИВЕТ</h1>
-				</div>
+				<JournalForm onSubmit={addItem} />
 			</Body>
 		</div>
 	)

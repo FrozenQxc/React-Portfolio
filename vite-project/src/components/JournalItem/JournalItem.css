@@ -34,9 +34,3 @@
 	display: flex;
 	gap: 10px;
 }
-
-.journal-item:hover {
-	background: rgba(0, 0, 0, 0.03);
-	border: 1px solid black;
-	transition: 0.5s;
-}
