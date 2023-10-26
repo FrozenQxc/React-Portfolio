@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	overflow-x: hidden;
+	background-color: #111;
+	color: #bbb;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.counter {
+	font-size: 50px;
+
+	button {
+		font-size: 50px;
+	}
+}
