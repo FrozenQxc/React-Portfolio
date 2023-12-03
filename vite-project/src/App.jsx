@@ -8,18 +8,18 @@ import JournalForm from './components/JournalForm/JournalForm'
 import JournalList from './components/JournalList/JournalList'
 
 const INITIAL_DATA = [
-	// {
-	// 	id: 1,
-	// 	title: 'Я райн гослинг',
-	// 	text: 'Вкусно покушал',
-	// 	date: new Date(),
-	// },
-	// {
-	// 	id: 2,
-	// 	title: 'Омега люль',
-	// 	text: 'Шнеля шнеля',
-	// 	date: new Date(),
-	// },
+	{
+		id: 1,
+		title: 'Я райн гослинг',
+		text: 'Вкусно покушал',
+		date: new Date(),
+	},
+	{
+		id: 2,
+		title: 'Омега люль',
+		text: 'Шнеля шнеля',
+		date: new Date(),
+	},
 ]
 
 const App = () => {
@@ -32,15 +32,15 @@ const App = () => {
 	}
 
 	const addItem = item => {
-		setItems(oldItems => [
-			...oldItems,
-			{
-				text: item.text,
-				title: item.title,
-				date: new Date(item.date),
-				id: Math.max(...(oldItems.map(i => i.id) + 1)),
-			},
-		])
+		console.log(item)
+		setItems(oldItems => [...oldItems, item])
+		// 	{
+		// 		text: item.text,
+		// 		title: item.title,
+		// 		date: new Date(item.date),
+		// 		id: Math.max(...(oldItems.map(i => i.id) + 1)),
+		// 	},
+		// ])
 	}
 
 	return (
@@ -52,7 +52,7 @@ const App = () => {
 						<img src='/public/2.jpg' alt='' />
 					</a>
 				</div>
-				<Button />
+				<Button onClick={() => console.log('нажали')} text='Сохарить'></Button>
 
 				<JournalList items={items} />
 			</LeftPanel>

@@ -24,33 +24,36 @@ const JournalForm = ({ onSubmit }) => {
 	}
 
 	const addJournalItem = e => {
+		console.log(e)
 		e.preventDefault()
 		const formData = new FormData(e.target)
 		const formProps = Object.fromEntries(formData)
-		let isFormValid = true
+		console.log(formProps)
+		onSubmit(formProps)
+		// let isFormValid = true
 
-		if (!formProps.title.trim().length) {
-			setFormValidState(state => ({ ...state, title: false }))
-			isFormValid = false
-		}
-		if (!formProps.text.trim().length) {
-			setFormValidState(state => ({ ...state, text: false }))
-			isFormValid = false
-		}
-		if (!formProps.date) {
-			setFormValidState(state => ({ ...state, date: false }))
-			isFormValid = false
-		}
+		// if (!formProps.title.trim().length) {
+		// 	setFormValidState(state => ({ ...state, title: false }))
+		// 	isFormValid = false
+		// }
+		// if (!formProps.text.trim().length) {
+		// 	setFormValidState(state => ({ ...state, text: false }))
+		// 	isFormValid = false
+		// }
+		// if (!formProps.date) {
+		// 	setFormValidState(state => ({ ...state, date: false }))
+		// 	isFormValid = false
+		// }
 
-		if (!isFormValid) {
-			return
-		}
+		// if (!isFormValid) {
+		// 	return
+		// }
 
-		setFormInput({
-			title: '',
-			text: '',
-			date: '',
-		})
+		// setFormInput({
+		// 	title: '',
+		// 	text: '',
+		// 	date: '',
+		// })
 	}
 
 	return (

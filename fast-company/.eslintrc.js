@@ -13,10 +13,18 @@ module.exports = {
     },
     plugins: ["react"],
     rules: {
-        "react/react-in-jsx-scope": "error",
-        semi: [2, "always"],
+        semi: ["error", "always"],
         indent: ["error", 4],
-        "space-before-function-paren": ["error", "never"],
+
+        "space-before-function-paren": [
+            "error",
+            {
+                anonymous: "always",
+                named: "always",
+                asyncArrow: "always"
+            }
+        ],
+
         quotes: [
             "error",
             "double",
@@ -25,4 +33,4 @@ module.exports = {
             }
         ]
     }
-};
+}

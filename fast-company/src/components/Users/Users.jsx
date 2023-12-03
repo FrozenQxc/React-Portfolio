@@ -1,12 +1,18 @@
 import PropTypes from "prop-types";
 import { React, useState } from "react";
+import api from "../../API";
 import { paginate } from "../../utils/paginate";
 import User from "../User/User";
+import GroupList from "./../GroupList/GroupList";
 import Pagination from "./../Pagination/Pagination";
 
 const Users = ({ users, ...rest }) => {
     const count = users.length;
-    const pageSize = 14;
+    const pageSize = 3;
+
+    const [professions] = useState(api.professions.fetchAll());
+
+    console.log(professions);
     const [currentPage, setCurrentPage] = useState(1);
     const handlePageChange = (pageIndex) => {
         setCurrentPage(pageIndex);
@@ -16,6 +22,7 @@ const Users = ({ users, ...rest }) => {
 
     return (
         <div>
+            <GroupList item={professions} />
             {users.length > 0 && (
                 <table className="table">
                     <thead>

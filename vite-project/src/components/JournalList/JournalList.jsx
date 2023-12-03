@@ -27,3 +27,11 @@ const JournalList = ({ items }) => {
 }
 
 export default JournalList
+
+
+<div className={styles.banner_record}>
+<div className={styles.header}>
+	<h1>Название</h1>
+</div>
+<RecordItem title={el.title} />
+</div>
